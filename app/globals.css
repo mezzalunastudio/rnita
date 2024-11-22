@@ -19,3 +19,8 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+ol {
+  list-style-type: decimal;
+  margin-left: 1.5rem;
+}
