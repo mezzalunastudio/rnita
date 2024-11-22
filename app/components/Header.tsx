@@ -1,7 +1,5 @@
 import React from "react";
 import Link from "next/link";
-
-// Define the structure for navigation links
 interface INavLink {
   label: string;
   href: string;

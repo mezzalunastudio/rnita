@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "@/app/components/Header";
 import Banner from "@/app/components/Banner";
-// import Galery from "@/app/components/Gallery";
 import Footer from "@/app/components/Footer";
 
 export default function Home() {
@@ -10,7 +9,6 @@ export default function Home() {
       <Header />
       <main className="flex-grow bg-stone-200 py-10">
         <Banner />
-        {/* <Galery /> */}
       </main>
       <Footer />
     </div>

@@ -15,7 +15,6 @@ export default function Colors() {
           <button className="px-6 py-2 bg-transparent text-zinc-800 font-semibold rounded-sm   hover:text-zinc-600 transition-colors border border-zinc-500 font-[family-name:var(--font-geist-mono)]">
             Button 2
           </button>
-          s
         </div>
       </div>
       <div className="h-96 flex flex-col items-center justify-center bg-gray-200 border-b-2 border-gray-400">
@@ -30,7 +29,6 @@ export default function Colors() {
           <button className="px-6 py-2 bg-transparent text-gray-800 font-semibold rounded-sm   hover:text-gray-600 transition-colors border border-zinc-500 font-[family-name:var(--font-geist-mono)]">
             Button 2
           </button>
-          s
         </div>
       </div>
       <div className="h-96 flex flex-col items-center justify-center bg-zinc-200 border-b-2 border-zinc-400">
@@ -45,7 +43,6 @@ export default function Colors() {
           <button className="px-6 py-2 bg-transparent text-zinc-800 font-semibold rounded-sm   hover:text-zinc-600 transition-colors border border-zinc-500 font-[family-name:var(--font-geist-mono)]">
             Button 2
           </button>
-          s
         </div>
       </div>
       <div className="h-96 flex flex-col items-center justify-center bg-neutral-200 border-b-2 border-neutral-400">
