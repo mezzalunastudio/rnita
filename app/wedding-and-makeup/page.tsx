@@ -67,20 +67,20 @@ export default function Page() {
   const [info, setInfo] = useState<IButtonInfo>(buttons[0]);
 
   return (
-    <div>
+    <>
       <Header />
-      <div className="min-h-screen flex flex-col items-center bg-stone-200 border-b-2 border-stone-400 p-5">
-        <h1 className="text-3xl font-bold mb-6 text-center border-b-2 border-stone-300 text-stone-800 mt-10">
+      <section className="min-h-screen bg-gray-200 text-gray-800 flex flex-col items-center p-5 font-[family-name:var(--font-geist-mono)]">
+        <h1 className="text-3xl font-medium mb-6 text-center mt-10">
           Price List Wedding & Make Up
         </h1>
-        <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-3 my-5">
+        <div className="flex flex-wrap gap-4 justify-center mb-8">
           {buttons.map((button) => (
             <button
               key={button.title}
-              className={`px-3 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-6 lg:py-2 lg:text-base font-semibold rounded-md transition-colors border font-[family-name:var(--font-geist-mono)] min-h-[40px] ${
+              className={`px-3 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-6 lg:py-2 lg:text-base font-semibold transition-colors font-[family-name:var(--font-geist-mono)] min-h-[40px] ${
                 info.title === button.title
-                  ? "bg-stone-500 text-white hover:bg-stone-600"
-                  : "bg-white text-stone-800 border-stone-500 hover:text-stone-600"
+                  ? "bg-gray-400 text-white hover:bg-gray-500"
+                  : "bg-white text-gray-800 border-gray-500 hover:text-gray-600"
               }`}
               onClick={() => setInfo(button)}
             >
@@ -88,16 +88,10 @@ export default function Page() {
             </button>
           ))}
         </div>
-
-        <div className="mt-5 p-4 bg-white border border-stone-300 rounded-lg flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:items-start lg:space-x-6 shadow-md">
-          <div className="flex-shrink-0 mx-auto lg:mx-0">
-            <Image
-              src={info.image}
-              alt={info.title}
-              width={300}
-              height={200}
-              className="rounded-lg shadow-sm"
-            />
+        <hr className="w-full max-w-[80%] sm:max-w-[75%] md:max-w-[70%] lg:max-w-[60%] mx-auto border-b-2 border-gray-300" />
+        <div className="mt-5 p-8 w-full max-w-[80%] sm:max-w-[75%] md:max-w-[70%] lg:max-w-[60%] mx-auto flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:items-start lg:space-x-6 shadow-md">
+          <div className="flex-shrink-0 w-full lg:w-1/2 mx-auto lg:mx-0 lg:border-r lg:border-stone-300 lg:pr-6">
+            <Image src={info.image} alt={info.title} width={300} height={200} className=" w-full object-cover" />
           </div>
           <div className="flex flex-col space-y-2 text-center lg:text-left">
             <h2 className="text-2xl font-bold text-stone-800">{info.title}</h2>
@@ -108,8 +102,8 @@ export default function Page() {
             ></div>
           </div>
         </div>
-      </div>
+      </section>
       <Footer />
-    </div>
+    </>
   );
 }

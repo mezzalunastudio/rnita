@@ -16,20 +16,20 @@ export default function PaketTenda() {
   return (
     <div>
       <Header />
-      <div className="min-h-screen flex flex-col items-center bg-stone-200 border-b-2 border-stone-400 p-5">
+      <div className="min-h-screen flex flex-col items-center bg-gray-200 border-b-2 border-stone-400 p-5 font-[family-name:var(--font-geist-mono)]">
         <h1 className="text-3xl font-bold mb-6 text-center border-b-2 border-stone-300 text-stone-800 mt-10">
           Paket Tenda
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-6xl">
+        <div className="grid grid-cols-2 lg:grid-cols-2 md:grid-cols-2 gap-4 w-4/5 lg:w-1/2 mx-auto">
           {tendaPackages.map((item, index) => (
             <div
               key={index}
-              className="border rounded-lg p-6 shadow-md text-center bg-white hover:shadow-lg transition-shadow"
+              className="border rounded-lg p-6 shadow-md text-center hover:shadow-lg transition-shadow"
             >
               <h2 className="text-lg font-semibold mb-2 text-stone-800">
                 {item.name}
               </h2>
-              <p className="text-sm text-stone-800">Harga: {item.price}</p>
+              <p className="text-lg text-stone-900">Harga: {item.price}</p>
             </div>
           ))}
         </div>

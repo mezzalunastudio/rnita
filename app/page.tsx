@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow bg-stone-200 py-10">
+      <main className="flex-grow bg-gray-200 py-10">
         <Banner />
       </main>
       <Footer />

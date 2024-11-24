@@ -1,24 +1,24 @@
 import React from "react";
-import { FaInstagram } from "react-icons/fa";
+// import { FaInstagram } from "react-icons/fa";
 
-const socialLinks = [
-  {
-    platform: "Rnite Makeup",
-    href: "https://www.instagram.com/rnita.makeup/profilecard/?igsh=N2VzaHdnNm0zMnJ0",
-    icon: <FaInstagram size={20} />,
-  },
-  {
-    platform: "Rnite Decoration",
-    href: "https://www.instagram.com/rnita.deco/profilecard/?igsh=MXFvaGhrNGRmM210MA%3D%3D",
-    icon: <FaInstagram size={20} />,
-  },
-];
+// const socialLinks = [
+//   {
+//     platform: "Rnite Makeup",
+//     href: "https://www.instagram.com/rnita.makeup/profilecard/?igsh=N2VzaHdnNm0zMnJ0",
+//     icon: <FaInstagram size={20} />,
+//   },
+//   {
+//     platform: "Rnite Decoration",
+//     href: "https://www.instagram.com/rnita.deco/profilecard/?igsh=MXFvaGhrNGRmM210MA%3D%3D",
+//     icon: <FaInstagram size={20} />,
+//   },
+// ];
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-800 text-white py-4 shadow-md">
-      <div className="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-        <div className="flex space-x-4">
+    <footer className="bg-gray-400 text-white py-4 shadow-md text-center font-[family-name:var(--font-geist-mono)]">
+      <div className="">
+        {/* <div className="flex space-x-4">
           {socialLinks.map((link, index) => (
             <a
               key={index}
@@ -34,9 +34,9 @@ export default function Footer() {
               {link.icon}
             </a>
           ))}
-        </div>
+        </div> */}
 
-        <p className="text-sm lg:text-base font-medium text-center lg:text-right font-[family-name:var(--font-geist-mono)]">
+        <p className="">
           Template by <span className="font-bold ">Mezzaluna Studio</span>
         </p>
       </div>
