@@ -5,13 +5,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --hover: #a9a99c;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-  }
+  } */
 }
 
 body {
@@ -21,6 +22,20 @@ body {
 }
 
 ol {
-  list-style-type: decimal;
+  list-style-type: square;
   margin-left: 1.5rem;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 font-medium text-white bg-stone-400 transition-all duration-200 ease-in-out outline outline-1 outline-offset-1 outline-stone-700;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 font-medium bg-white text-stone-500 outline outline-1 outline-offset-1  outline-stone-400;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-500 hover:bg-gray-600 focus:ring-gray-300;
+  }
 }

@@ -1,5 +1,11 @@
 import React from "react";
+import { Montserrat } from "next/font/google";
 // import { FaInstagram } from "react-icons/fa";
+
+const montserrat = Montserrat({
+  weight: "500",
+  subsets: ["latin"],
+});
 
 // const socialLinks = [
 //   {
@@ -16,7 +22,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-400 text-white py-4 shadow-md text-center font-[family-name:var(--font-geist-mono)]">
+    <footer className="bg-white text-stone-800 py-4 text-center">
       <div className="">
         {/* <div className="flex space-x-4">
           {socialLinks.map((link, index) => (
@@ -36,8 +42,8 @@ export default function Footer() {
           ))}
         </div> */}
 
-        <p className="">
-          Template by <span className="font-bold ">Mezzaluna Studio</span>
+        <p className={`text-stone-400  ${montserrat.className}`}>
+          Template by <span className="text-stone-500">Mezzaluna Studio</span>
         </p>
       </div>
     </footer>

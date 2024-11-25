@@ -17,7 +17,7 @@ export default function Banner() {
             href="https://shorturl.at/PPNRM"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-stone-500 text-white hover:bg-stone-600 px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-xs sm:text-sm lg:text-base font-semibold rounded-md transition-colors border font-[family-name:var(--font-geist-mono)] min-h-[40px] w-full sm:w-auto text-center"
+            className="bg-stone-500 text-white hover:bg-stone-600 px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-xs sm:text-sm lg:text-base font-semibold rounded-md transition-colors border min-h-[40px] w-full sm:w-auto text-center"
           >
             Explore Our Gallery
           </a>
@@ -25,7 +25,7 @@ export default function Banner() {
             href="https://shorturl.at/KoogW"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-stone-800 border-stone-500 hover:text-stone-600 px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-xs sm:text-sm lg:text-base font-semibold rounded-md transition-colors border font-[family-name:var(--font-geist-mono)] min-h-[40px] w-full sm:w-auto text-center"
+            className="bg-white text-stone-800 border-stone-500 hover:text-stone-600 px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-xs sm:text-sm lg:text-base font-semibold rounded-md transition-colors border min-h-[40px] w-full sm:w-auto text-center"
           >
             Find Us on Google Maps
           </a>
