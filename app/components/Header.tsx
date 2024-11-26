@@ -25,10 +25,6 @@ const navLinks: INavLink[] = [
   { label: "Wedding & Makeup", href: "/wedding-and-makeup" },
   { label: "Paket Makeup", href: "/paket-makeup" },
   { label: "Paket Tenda", href: "/paket-tenda" },
-  // {
-  //   label: "Whatsapp",
-  //   href: "https://api.whatsapp.com/send?phone=62895354969032",
-  // },
 ];
 
 export default function Header() {

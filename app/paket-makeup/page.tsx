@@ -22,10 +22,9 @@ interface IButtonInfo {
   price?: string;
   image: string;
   options: MakeupOption[];
+  button?: string;
 }
 
-
-// Define interface for MakeupPackage
 interface MakeupOption {
   name: string;
   price: string;
@@ -35,7 +34,7 @@ const buttons: IButtonInfo[] = [
   {
     title: "Paket Make Up Wisuda",
     description:
-    "Paket make up spesial untuk wisuda, memberikan hasil yang memukau dengan berbagai opsi sesuai kebutuhan.",
+      "Paket make up spesial untuk wisuda, memberikan hasil yang memukau dengan berbagai opsi sesuai kebutuhan.",
     price: "Rp 5.000.000",
     image: "/assets/img-1.jpg",
     options: [
@@ -43,6 +42,7 @@ const buttons: IButtonInfo[] = [
       { name: "Makeup Hijab", price: "250k" },
       { name: "Makeup Hairdo", price: "280k" },
     ],
+    button: "Pesan Sekarang",
   },
   {
     title: "Paket Engagement",
@@ -55,6 +55,7 @@ const buttons: IButtonInfo[] = [
       { name: "Makeup Hijab", price: "250k" },
       { name: "Makeup Hairdo", price: "280k" },
     ],
+    button: "Pesan Sekarang",
   },
 ];
 
@@ -86,9 +87,9 @@ export default function MakeupPackages() {
             </button>
           ))}
         </div>
-         <hr className="w-full max-w-[80%] sm:max-w-[75%] md:max-w-[70%] lg:max-w-[80%] mx-auto border-b-1 border-stone-200" />
-  <div className="mt-5 p-8 w-full max-w-[80%] sm:max-w-[75%] md:max-w-[70%] lg:max-w-[80%] mx-auto flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:items-start lg:space-x-6">
-    <div className="flex-shrink-0 w-full lg:w-1/2 mx-auto lg:mx-0 lg:pr-6">
+        <hr className="w-full max-w-[80%] sm:max-w-[75%] md:max-w-[70%] lg:max-w-[80%] mx-auto border-b-1 border-stone-200" />
+        <div className="mt-5 p-8 w-full max-w-[80%] sm:max-w-[75%] md:max-w-[70%] lg:max-w-[80%] mx-auto flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:items-start lg:space-x-6">
+          <div className="flex-shrink-0 w-full lg:w-1/2 mx-auto lg:mx-0 lg:pr-6">
             <Image
               src={info.image}
               alt={info.title}
@@ -108,26 +109,35 @@ export default function MakeupPackages() {
               dangerouslySetInnerHTML={{ __html: info.description }}
             ></div>
             <ul
-                    className={`text-stone-600 text-lg space-y-3 ${montserrat.className}`}
-                  >
-                    {info.options.map((option, idx) => (
-                      <li
-                        key={idx}
-                        className="flex justify-between items-center border-b border-stone-200 pb-2"
-                      >
-                        <span>{option.name}</span>
-                        <span
-                          className={`font-bold text-xl ${bodoni.className}`}
-                        >
-                          {option.price}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-            <p className={`text-4xl ${bodoni.className}`}>{info.price}</p>
+              className={`text-stone-600 text-lg space-y-3 ${montserrat.className}`}
+            >
+              {info.options.map((option, idx) => (
+                <li
+                  key={idx}
+                  className="flex justify-between items-center border-b border-stone-200 pb-2"
+                >
+                  <span>{option.name}</span>
+                  <span className={`font-bold text-xl ${bodoni.className}`}>
+                    {option.price}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className={`text-4xl ${bodoni.className}`}>{info.price}</p>{" "}
+            <button
+              type="button"
+              formTarget="_blank"
+              className={`btn hover:bg-stone-600 uppercase px-3 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-6 lg:py-2 lg:text-base transition-colors min-h-[40px] ${montserrat.className}`}
+              onClick={() =>
+                (window.location.href =
+                  "https://api.whatsapp.com/send?phone=628979078317")
+              }
+            >
+              {info.button}
+            </button>
           </div>
         </div>
-        </section>
+      </section>
       <Footer />
     </>
   );

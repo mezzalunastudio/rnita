@@ -8,60 +8,58 @@ import { Montserrat } from "next/font/google";
 
 interface IButtonInfo {
   title: string;
-  description: string;
+  includes: string[];
   price?: string;
   image: string;
+  button?: string;
 }
 
 const buttons: IButtonInfo[] = [
   {
     title: "Paket Basic",
-    description: `
-      <ol>
-        <li>Makeup dan busana akad dan resepsi (2baju) CPP & CPW</li>
-        <li>Make dan busana 2 ibu dan 2 bapak</li>
-        <li>Melati simple sepasang pengantin</li>
-        <li>Makeup dan busana penerima tamu 4 orang</li>
-        <li>Free : Upacara adat/panggih</li>
-        <li>Free : Softlens</li>
-        <li>Free : Fakenail</li>
-      </ol>
-    `,
+    includes: [
+      "Makeup dan busana akad dan resepsi (2baju) CPP & CPW",
+      "Make dan busana 2 ibu dan 2 bapak",
+      "Melati simple sepasang pengantin",
+      "Makeup dan busana penerima tamu 4 orang",
+      "Free : Upacara adat/panggih",
+      "Free : Softlens",
+      "Free : Fakenail",
+    ],
     price: "Rp 5.000.000",
     image: "/assets/img-1.jpg",
+    button: "Pesan Sekarang",
   },
   {
     title: "Paket Medium",
-    description: `
-      <ol>
-        <li>Makeup dan busana akad dan resepsi (2baju) CPP & CPW</li>
-        <li>Makeup dan busana 2 ibu dan 2 bapak</li>
-        <li>Melati bebas pilih adat jawa/sunda</li>
-        <li>Makeup dan busana penerima tamu 4 orang</li>
-        <li>Free Upacara adat/panggih</li>
-        <li>Free : Softlens</li>
-        <li>Free : Handboquet</li>
-      </ol>
-    `,
+    includes: [
+      "Makeup dan busana akad dan resepsi (2baju) CPP & CPW",
+      "Makeup dan busana 2 ibu dan 2 bapak",
+      "Melati bebas pilih adat jawa/sunda",
+      "Makeup dan busana penerima tamu 4 orang",
+      "Free Upacara adat/panggih",
+      "Free : Softlens",
+      "Free : Handboquet",
+    ],
     price: "Rp 6.000.000",
     image: "/assets/img-2.jpg",
+    button: "Pesan Sekarang",
   },
   {
     title: "Paket Premium",
-    description: `
-      <ol>
-        <li>Makeup dan busana akad dan resepsi (2baju) CPP & CPW</li>
-        <li>Make dan busana 2 ibu dan 2 bapak</li>
-        <li>Melati bebas pilih adat jawa/sunda</li>
-        <li>Makeup dan busana penerima tamu 4 orang</li>
-        <li>Baju 3 pasang pengantin 1 akad dan 2 resepsi</li>
-         <li>Free Upacara adat/panggih</li>
-        <li>Free : Softlens</li>
-        <li>Free : Handboquet</li>
-      </ol>
-    `,
+    includes: [
+      "Makeup dan busana akad dan resepsi (2baju) CPP & CPW",
+      "Make dan busana 2 ibu dan 2 bapak",
+      "Melati bebas pilih adat jawa/sunda",
+      "Makeup dan busana penerima tamu 4 orang",
+      "Baju 3 pasang pengantin 1 akad dan 2 resepsi",
+      "Free Upacara adat/panggih",
+      "Free : Softlens",
+      "Free : Handboquet",
+    ],
     price: "Rp 7.000.000",
     image: "/assets/img-3.jpg",
+    button: "Pesan Sekarang",
   },
 ];
 
@@ -105,8 +103,8 @@ export default function Page() {
           ))}
         </div>
         <hr className="w-full max-w-[80%] sm:max-w-[75%] md:max-w-[70%] lg:max-w-[80%] mx-auto border-b-1 border-stone-200" />
-  <div className="mt-5 p-8 w-full max-w-[80%] sm:max-w-[75%] md:max-w-[70%] lg:max-w-[80%] mx-auto flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:items-start lg:space-x-6">
-    <div className="flex-shrink-0 w-full lg:w-1/2 mx-auto lg:mx-0 lg:pr-6">
+        <div className="mt-5 p-8 w-full max-w-[80%] sm:max-w-[75%] md:max-w-[70%] lg:max-w-[80%] mx-auto flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:items-start lg:space-x-6">
+          <div className="flex-shrink-0 w-full lg:w-1/2 mx-auto lg:mx-0 lg:pr-6">
             <Image
               src={info.image}
               alt={info.title}
@@ -121,11 +119,31 @@ export default function Page() {
             >
               {info.title}
             </h2>
-            <div
+            {/* <div
               className={`text-left text-lg ${montserrat.className}`}
-              dangerouslySetInnerHTML={{ __html: info.description }}
+              dangerouslySetInnerHTML={{ __html: info.includes }}
             ></div>
+            <p className={`text-4xl ${bodoni.className}`}>{info.price}</p> */}
+
+            <ol className={`text-left text-lg ${montserrat.className}`}>
+              {info.includes.map((item, idx) => (
+                <li key={idx} className="text-gray-600 capitalize md:py-2 py-1">
+                  {item}
+                </li>
+              ))}
+            </ol>
             <p className={`text-4xl ${bodoni.className}`}>{info.price}</p>
+            <button
+              type="button"
+              formTarget="_blank"
+              className={`btn hover:bg-stone-600 uppercase px-3 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-6 lg:py-2 lg:text-base transition-colors min-h-[40px] ${montserrat.className}`}
+              onClick={() =>
+                (window.location.href =
+                  "https://api.whatsapp.com/send?phone=628979078317")
+              }
+            >
+              {info.button}
+            </button>
           </div>
         </div>
       </section>

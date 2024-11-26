@@ -22,6 +22,7 @@ interface IDecorationPackage {
   includes: string[];
   additional?: string[];
   image?: string;
+  button?: string;
 }
 
 const decorationPackages: IDecorationPackage[] = [
@@ -38,6 +39,7 @@ const decorationPackages: IDecorationPackage[] = [
       "inisial nama",
     ],
     image: "/assets/img-1.jpg",
+    button: "Pesan Sekarang",
   },
   {
     title: "PAKET 2",
@@ -51,6 +53,7 @@ const decorationPackages: IDecorationPackage[] = [
       "karpet",
     ],
     image: "/assets/img-2.jpg",
+    button: "Pesan Sekarang",
   },
   {
     title: "PAKET 2 with Makeup",
@@ -64,6 +67,7 @@ const decorationPackages: IDecorationPackage[] = [
     ],
     additional: ["makeup by Rnita makeup"],
     image: "/assets/img-3.jpg",
+    button: "Pesan Sekarang",
   },
 ];
 
@@ -118,7 +122,7 @@ export default function DecorationEngagementPage() {
             </h2>
             <ol className={`text-left text-lg ${montserrat.className}`}>
               {selectedPackage.includes.map((item, idx) => (
-                <li key={idx} className="text-gray-600 capitalize">
+                <li key={idx} className="text-gray-600 capitalize md:py-2 py-1">
                   {item}
                 </li>
               ))}
@@ -126,15 +130,31 @@ export default function DecorationEngagementPage() {
             <p className={`text-4xl ${bodoni.className}`}>
               {selectedPackage.price}
             </p>
+            <button
+              type="button"
+              formTarget="_blank"
+              className={`btn hover:bg-stone-600 uppercase px-3 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-6 lg:py-2 lg:text-base transition-colors min-h-[40px] ${montserrat.className}`}
+              onClick={() =>
+                (window.location.href =
+                  "https://api.whatsapp.com/send?phone=628979078317")
+              }
+            >
+              {selectedPackage.button}
+            </button>
 
             {selectedPackage.additional && (
               <div className="mt-4">
-                <h3 className={`text-2xl font-semibold text-stone-700 mb-2 ${bodoni.className} `}>
+                <h3
+                  className={`text-2xl font-semibold text-stone-700 mb-2 ${bodoni.className} `}
+                >
                   Additional:
                 </h3>
                 <ul className="list-disc list-inside">
                   {selectedPackage.additional.map((add, idx) => (
-                    <li key={idx} className={`text-stone-600 capitalize ${montserrat.className}`}>
+                    <li
+                      key={idx}
+                      className={`text-stone-600 capitalize ${montserrat.className}`}
+                    >
                       {add}
                     </li>
                   ))}

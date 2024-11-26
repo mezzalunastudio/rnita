@@ -53,7 +53,7 @@ const tendaPackages = [
   },
 ];
 
-const imagePaths = [
+const imagePaths: Array<string> = [
   "/assets/img-1.jpg",
   "/assets/img-2.jpg",
   "/assets/img-3.jpg",
