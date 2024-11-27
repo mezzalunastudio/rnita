@@ -79,15 +79,15 @@ export default function Page() {
   return (
     <>
       <Header />
-      <section className="min-h-screen flex flex-col items-center p-5">
+      <section className="flex flex-col items-center">
         <h1
-          className={`text-3xl font-medium mb-6 text-center mt-2 sm:mt-4 ${bodoni.className}`}
+          className={`text-3xl font-medium mb-2 text-center mt-7 sm:mt-3 md:mt-2 ${bodoni.className}`}
         >
           Wedding & Make Up
         </h1>
         <div
-          className={`flex flex-wrap gap-4 justify-center mb-8 ${montserrat.className}`}
-        >
+          className={`flex flex-wrap gap-x-4 justify-center mb-8 ${montserrat.className}`}
+          >
           {buttons.map((button) => (
             <button
               key={button.title}

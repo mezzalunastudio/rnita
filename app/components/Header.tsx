@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Montserrat } from "next/font/google";
@@ -9,6 +10,13 @@ interface INavLink {
   label: string;
   href: string;
 }
+
+const navLinks: INavLink[] = [
+  { label: "Dekorasi Engagement", href: "/dekorasi-engagement" },
+  { label: "Wedding & Makeup", href: "/wedding-and-makeup" },
+  { label: "Paket Makeup", href: "/paket-makeup" },
+  { label: "Paket Tenda", href: "/paket-tenda" },
+];
 
 const bodoni = Bodoni_Moda({
   weight: "600",
@@ -20,29 +28,46 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
-const navLinks: INavLink[] = [
-  { label: "Dekorasi Engagement", href: "/dekorasi-engagement" },
-  { label: "Wedding & Makeup", href: "/wedding-and-makeup" },
-  { label: "Paket Makeup", href: "/paket-makeup" },
-  { label: "Paket Tenda", href: "/paket-tenda" },
-];
-
 export default function Header() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="text-stone-800 py-4 h-52 flex flex-col justify-center items-center">
+    <header className="text-stone-800 py-4 h-52 flex flex-col justify-between items-center">
       <div className="container mx-auto px-4 flex flex-col lg:flex-col items-center lg:justify-between space-y-2">
         <Link
           href="/wedding-and-makeup"
-          className={`text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase m-4 p-4 ${bodoni.className}`}
+          className={`md:hidden block text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase px-4 md:px-6 pt-10 md:pt-2 ${bodoni.className}`}
         >
-          rnita
+          rnita1
         </Link>
+        
         <div className="border-y-2 border-stone-200 w-full flex justify-center">
           <div className="w-full max-w-7xl px-4 flex flex-col items-center">
+            <Link
+              href="/wedding-and-makeup"
+              className={`md:block hidden text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase px-4 md:px-6 pt-10 md:pt-2 ${bodoni.className}`}
+            >
+              rnita2
+            </Link>
+
+            <button
+              className="md:hidden fixed top-5 right-5 z-50 p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle Menu"
+            >
+              {isMenuOpen ? (
+                <FiX className="w-6 h-6 text-stone-800" />
+              ) : (
+                <FiMenu className="w-6 h-6 text-stone-800" />
+              )}
+            </button>
             <nav
-              className={`flex flex-wrap gap-4 lg:gap-6 justify-center py-5 ${montserrat.className}`}
+              className={`${
+                isMenuOpen ? "flex" : "hidden"
+              } fixed inset-0 bg-white bg-opacity-90 backdrop-blur z-40 md:static md:block md:bg-transparent md:flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 py-8 px-6 ${
+                montserrat.className
+              }`}
             >
               {navLinks.map((link, index) => {
                 const isActive = pathname === link.href;
@@ -50,7 +75,7 @@ export default function Header() {
                   <Link
                     key={index}
                     href={link.href}
-                    className={`text-sm hover:text-stone-400 lg:text-sm font-medium uppercase ${
+                    className={`text-lg md:text-sm hover:text-stone-400 font-medium uppercase ${
                       isActive ? "text-stone-400" : "text-stone-800"
                     } ${
                       link.label === "Whatsapp"
@@ -63,6 +88,7 @@ export default function Header() {
                         ? undefined
                         : "noopener noreferrer"
                     }
+                    onClick={() => setIsMenuOpen(false)} // Close menu on link click
                   >
                     {link.label}
                   </Link>
