@@ -71,8 +71,8 @@ export default function MakeupPackages() {
           Paket Make Up
         </h1>
         <div
-          className={`flex flex-wrap gap-x-4 justify-center mb-8 ${montserrat.className}`}
-        >
+          className={`flex flex-wrap gap-x-4 justify-center mb-8 md:mt-0 mt-0 ${montserrat.className}`}
+          >
           {buttons.map((button) => (
             <button
               key={button.title}

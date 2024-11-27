@@ -86,7 +86,7 @@ export default function DecorationEngagementPage() {
           Paket Dekorasi Engagement
         </h1>
         <div
-          className={`flex flex-wrap gap-x-4 justify-center mb-8 ${montserrat.className}`}
+          className={`flex flex-wrap gap-x-4 justify-center mb-8 md:mt-4 mt-3 ${montserrat.className}`}
         >
           {decorationPackages.map((paket, index) => (
             <button
