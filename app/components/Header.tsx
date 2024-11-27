@@ -33,13 +33,13 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="text-stone-800 py-4 h-52 flex flex-col justify-between items-center">
+    <header className="text-stone-800 py-4 flex flex-col justify-between items-center">
       <div className="container mx-auto px-4 flex flex-col lg:flex-col items-center lg:justify-between space-y-2">
         <Link
           href="/wedding-and-makeup"
-          className={`md:hidden block text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase px-4 md:px-6 pt-10 md:pt-2 ${bodoni.className}`}
+          className={`md:hidden block text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase px-4 md:px-6 pt-0 md:pt-2 ${bodoni.className}`}
         >
-          rnita1
+          rnita
         </Link>
         
         <div className="border-y-2 border-stone-200 w-full flex justify-center">
@@ -48,11 +48,11 @@ export default function Header() {
               href="/wedding-and-makeup"
               className={`md:block hidden text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase px-4 md:px-6 pt-10 md:pt-2 ${bodoni.className}`}
             >
-              rnita2
+              rnita
             </Link>
 
             <button
-              className="md:hidden fixed top-5 right-5 z-50 p-2"
+              className="md:hidden fixed top-6 right-5 z-50 p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle Menu"
             >
@@ -65,7 +65,7 @@ export default function Header() {
             <nav
               className={`${
                 isMenuOpen ? "flex" : "hidden"
-              } fixed inset-0 bg-white bg-opacity-90 backdrop-blur z-40 md:static md:block md:bg-transparent md:flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 py-8 px-6 ${
+              } fixed inset-0 bg-white bg-opacity-90 backdrop-blur z-40 md:static block md:bg-transparent md:flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 py-8 px-6 ${
                 montserrat.className
               }`}
             >
