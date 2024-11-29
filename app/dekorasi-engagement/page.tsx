@@ -79,19 +79,19 @@ export default function DecorationEngagementPage() {
   return (
     <>
       <Header />
-      <section className="flex flex-col items-center">
+      <section className="flex flex-col px-2 md:px-4">
         <h1
-          className={`text-3xl font-medium mb-2 text-center mt-7 sm:mt-3 md:mt-2 ${bodoni.className}`}
-        >
+          className={`text-2xl font-medium mb-2 text-center mt-7 sm:mt-3 md:mt-2 ${bodoni.className}`}
+          >
           Paket Dekorasi Engagement
         </h1>
         <div
-          className={`flex flex-wrap gap-x-4 justify-center mb-8 md:mt-4 mt-3 ${montserrat.className}`}
-        >
+          className={`flex flex-wrap gap-2 md:gap-4 justify-center mb-8 md:mt-4 mt-3 ${montserrat.className}`}
+          >
           {decorationPackages.map((paket, index) => (
             <button
               key={index}
-              className={`px-3 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-6 lg:py-2 lg:text-base transition-colors min-h-[40px] ${
+              className={`px-2 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-6 lg:py-2 lg:text-base transition-colors min-h-[40px] ${
                 selectedPackage.title === paket.title
                   ? " btn uppercase"
                   : " btn-primary uppercase"
@@ -126,7 +126,7 @@ export default function DecorationEngagementPage() {
                 </li>
               ))}
             </ol>
-            <p className={`text-4xl ${bodoni.className}`}>
+            <p className={`text-3xl md:text-4xl ${bodoni.className}`}>
               {selectedPackage.price}
             </p>
             <button
