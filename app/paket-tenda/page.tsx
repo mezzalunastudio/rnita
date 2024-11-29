@@ -54,11 +54,11 @@ const tendaPackages = [
 ];
 
 const imagePaths: Array<string> = [
-  "/assets/img-1.jpg",
-  "/assets/img-2.jpg",
-  "/assets/img-3.jpg",
-  "/assets/img-4.jpg",
-  "/assets/img-5.jpg",
+  "/assets/dekor-1.jpg",
+  "/assets/dekor-2.jpg",
+  "/assets/wedding&makeup-3.jpg",
+  "/assets/engagement-1.jpg",
+  "/assets/wedding&makeup-5.jpg",
 ];
 
 export default function PaketTenda() {

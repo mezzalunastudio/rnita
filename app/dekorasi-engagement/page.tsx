@@ -38,7 +38,7 @@ const decorationPackages: IDecorationPackage[] = [
       "karpet",
       "inisial nama",
     ],
-    image: "/assets/img-1.jpg",
+    image: "/assets/dekor-1.jpg",
     button: "Pesan Sekarang",
   },
   {
@@ -52,7 +52,7 @@ const decorationPackages: IDecorationPackage[] = [
       "2 kursi tifani (putih/coklat)",
       "karpet",
     ],
-    image: "/assets/img-2.jpg",
+    image: "/assets/dekor-2.jpg",
     button: "Pesan Sekarang",
   },
   {
@@ -66,7 +66,7 @@ const decorationPackages: IDecorationPackage[] = [
       "2 kursi tifani (putih/coklat)",
     ],
     additional: ["makeup by Rnita makeup"],
-    image: "/assets/img-3.jpg",
+    image: "/assets/dekor-3.jpg",
     button: "Pesan Sekarang",
   },
 ];

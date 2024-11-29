@@ -27,7 +27,7 @@ const buttons: IButtonInfo[] = [
       "Free : Fakenail",
     ],
     price: "Rp 5.000.000",
-    image: "/assets/img-1.jpg",
+    image: "/assets/wedding&makeup-5.jpg",
     button: "Pesan Sekarang",
   },
   {
@@ -42,7 +42,7 @@ const buttons: IButtonInfo[] = [
       "Free : Handboquet",
     ],
     price: "Rp 6.000.000",
-    image: "/assets/img-2.jpg",
+    image: "/assets/wedding&makeup-2.jpg",
     button: "Pesan Sekarang",
   },
   {
@@ -58,7 +58,7 @@ const buttons: IButtonInfo[] = [
       "Free : Handboquet",
     ],
     price: "Rp 7.000.000",
-    image: "/assets/img-3.jpg",
+    image: "/assets/wedding&makeup-4.jpg",
     button: "Pesan Sekarang",
   },
 ];

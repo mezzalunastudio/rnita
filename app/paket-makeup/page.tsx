@@ -36,7 +36,7 @@ const buttons: IButtonInfo[] = [
     description:
       "Paket make up spesial untuk wisuda, memberikan hasil yang memukau dengan berbagai opsi sesuai kebutuhan.",
     price: "Rp 5.000.000",
-    image: "/assets/img-1.jpg",
+    image: "/assets/wisuda-1.jpg",
     options: [
       { name: "Makeup Only", price: "200k" },
       { name: "Makeup Hijab", price: "250k" },
@@ -49,7 +49,7 @@ const buttons: IButtonInfo[] = [
     description:
       "Paket make up untuk momen spesial pertunangan, memastikan penampilan elegan dan menawan.",
     price: "Rp 6.000.000",
-    image: "/assets/img-2.jpg",
+    image: "/assets/engagement-1.jpg",
     options: [
       { name: "Makeup Only", price: "200k" },
       { name: "Makeup Hijab", price: "250k" },
