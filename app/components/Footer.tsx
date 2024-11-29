@@ -98,7 +98,7 @@ export default function Footer() {
 
         <div className="flex flex-col items-center px-4 lg:px-6">
           <a
-            href="https://api.whatsapp.com/send?phone=628979078317&text=Saya%20mau%20pesan%20paket%20tenda%20..."
+            href="https://api.whatsapp.com/send/?phone=62895354969032&text&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
             className={`text-4xl ${bodoni.className} text-stone-700 hover:text-stone-500`}

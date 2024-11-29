@@ -130,7 +130,7 @@ export default function MakeupPackages() {
               className={`btn hover:bg-stone-600 uppercase px-3 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-6 lg:py-2 lg:text-base transition-colors min-h-[40px] ${montserrat.className}`}
               onClick={() =>
                 (window.location.href =
-                  "https://api.whatsapp.com/send?phone=628979078317")
+                  "https://api.whatsapp.com/send/?phone=62895354969032&text&type=phone_number&app_absent=0")
               }
             >
               {info.button}
