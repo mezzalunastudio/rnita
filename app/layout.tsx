@@ -16,13 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" href="/rnita-logo.jpg" sizes="any" />
       <body
         className={`antialiased scroll-smooth`}
         suppressHydrationWarning={true}
       >
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
