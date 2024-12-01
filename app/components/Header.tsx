@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Montserrat } from "next/font/google";
-import { Bodoni_Moda } from "next/font/google";
+import { fonts } from "@/app/src/font";
 
 interface INavLink {
   label: string;
@@ -19,16 +18,6 @@ const navLinks: INavLink[] = [
   { label: "Gallery", href: "/gallery" },
 ];
 
-const bodoni = Bodoni_Moda({
-  weight: "600",
-  subsets: ["latin"],
-});
-
-const montserrat = Montserrat({
-  weight: "500",
-  subsets: ["latin"],
-});
-
 export default function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +27,7 @@ export default function Header() {
       <div className="container mx-auto px-4 flex flex-col lg:flex-col items-center lg:justify-between space-y-2">
         <Link
           href="/wedding-and-makeup"
-          className={`md:hidden block text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase px-4 md:px-6 pt-0 md:pt-2 ${bodoni.className}`}
+          className={`md:hidden block text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase px-4 md:px-6 pt-0 md:pt-2 ${fonts.bodoni}`}
         >
           rnita
         </Link>
@@ -47,7 +36,7 @@ export default function Header() {
           <div className="w-full max-w-7xl px-4 flex flex-col items-center">
             <Link
               href="/wedding-and-makeup"
-              className={`md:block hidden text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase px-4 md:px-6 pt-10 md:pt-2 ${bodoni.className}`}
+              className={`md:block hidden text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase px-4 md:px-6 pt-10 md:pt-2 ${fonts.bodoni}`}
             >
               rnita
             </Link>
@@ -67,7 +56,7 @@ export default function Header() {
               className={`${
                 isMenuOpen ? "flex" : "hidden"
               } fixed inset-0 bg-white bg-opacity-90 backdrop-blur z-40 md:static block md:bg-transparent md:flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 py-8 px-6 ${
-                montserrat.className
+                fonts.montserrat
               }`}
             >
               {navLinks.map((link, index) => {

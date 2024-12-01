@@ -1,22 +1,9 @@
 "use client";
 import React from "react";
-// import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
-import { Bodoni_Moda } from "next/font/google";
-import { Montserrat } from "next/font/google";
+import { fonts } from "@/app/src/font";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import Link from "next/link";
-
-const bodoni = Bodoni_Moda({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const montserrat = Montserrat({
-  weight: "400",
-  subsets: ["latin"],
-});
-
 interface INavLink {
   label: string;
   href: string;
@@ -31,7 +18,6 @@ const navLinks: INavLink[] = [
 ];
 
 export default function Footer() {
-  // const router = useRouter();
   const pathname = usePathname();
 
   return (
@@ -60,7 +46,7 @@ export default function Footer() {
           <div className="my-4 md:my-2">
             <Link
               href="/wedding-and-makeup"
-              className={`text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase m-4 p-4 text-stone-700 ${bodoni.className}`}
+              className={`text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase m-4 p-4 text-stone-700 ${fonts.bodoni}`}
             >
               rnita
             </Link>
@@ -102,7 +88,7 @@ export default function Footer() {
             href="https://api.whatsapp.com/send/?phone=62895354969032&text&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-4xl ${bodoni.className} text-stone-700 hover:text-stone-500`}
+            className={`text-4xl ${fonts.bodoni} text-stone-700 hover:text-stone-500`}
           >
             <span className="block mb-2">PESAN</span>
             <span className="block">SEKARANG</span>
@@ -111,7 +97,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-4 bg-white py-3">
-        <p className={`text-stone-400  ${montserrat.className}`}>
+        <p className={`text-stone-400  ${fonts.montserrat}`}>
           Template by <span className="text-stone-500">Mezzaluna Studio</span>
         </p>
       </div>
