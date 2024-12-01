@@ -1,51 +1,11 @@
+// app/paket-makeup/page.tsx
+
 "use client";
 import React, { useState } from "react";
 
 import Image from "next/image";
 import { fonts } from "@/app/src/font";
-
-interface IButtonInfo {
-  title: string;
-  description: string;
-  price?: string;
-  image: string;
-  options: MakeupOption[];
-  button?: string;
-}
-
-interface MakeupOption {
-  name: string;
-  price: string;
-}
-
-const buttons: IButtonInfo[] = [
-  {
-    title: "Paket Make Up Wisuda",
-    description:
-      "Paket make up spesial untuk wisuda, memberikan hasil yang memukau dengan berbagai opsi sesuai kebutuhan.",
-    price: "Rp 5.000.000",
-    image: "/assets/wisuda-1.jpg",
-    options: [
-      { name: "Makeup Only", price: "200k" },
-      { name: "Makeup Hijab", price: "250k" },
-      { name: "Makeup Hairdo", price: "280k" },
-    ],
-    button: "Pesan Sekarang",
-  },
-  {
-    title: "Paket Engagement",
-    description:
-      "Paket make up untuk momen spesial pertunangan, memastikan penampilan elegan dan menawan.",
-    price: "Rp 6.000.000",
-    image: "/assets/engagement-1.jpg",
-    options: [
-      { name: "Makeup Only", price: "200k" },
-      { name: "Makeup Hijab", price: "250k" },
-      { name: "Makeup Hairdo", price: "280k" },
-    ],
-    button: "Pesan Sekarang",
-  },
-];
+import { buttons, IButtonInfo } from "@/app/src/makeupPackages";
 
 export default function MakeupPackages() {
   const [info, setInfo] = useState<IButtonInfo>(buttons[0]);
