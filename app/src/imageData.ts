@@ -30,10 +30,34 @@ export const imageData = [
     category: "Makeup",
     description:
       "An artistic and colorful makeup style showcasing creative flair.",
-      src: "/assets/wedding&makeup-2.jpg",
-    },
+    src: "/assets/wedding&makeup-2.jpg",
+  },
+  {
+    id: 17,
+    title: "Creative Makeup Art",
+    category: "Makeup",
+    description:
+      "An artistic and colorful makeup style showcasing creative flair.",
+    src: "/assets/makeup-1.jpg",
+  },
+  {
+    id: 18,
+    title: "Creative Makeup Art",
+    category: "Makeup",
+    description:
+      "An artistic and colorful makeup style showcasing creative flair.",
+    src: "/assets/makeup-2.jpg",
+  },
+  {
+    id: 19,
+    title: "Creative Makeup Art",
+    category: "Makeup",
+    description:
+      "An artistic and colorful makeup style showcasing creative flair.",
+    src: "/assets/makeup-3.jpg",
+  },
 
-  // Random category
+  // Dekor category
   {
     id: 5,
     title: "Serene Landscape",
@@ -55,52 +79,6 @@ export const imageData = [
     description: "A stunning view of the city illuminated by night lights.",
     src: "/assets/dekor-3.jpg",
   },
-  // {
-  //   id: 8,
-  //   title: "Vintage Camera",
-  //   category: "Wisuda",
-  //   description: "A close-up shot of a retro camera, evoking nostalgia.",
-  //   src: "/assets/wisuda/wisuda-4.jpg",
-  // },
-  // {
-  //   id: 9,
-  //   title: "Cozy Home Décor",
-  //   category: "Wisuda",
-  //   description: "A cozy and aesthetically pleasing interior design setup.",
-  //   src: "/assets/wisuda/wisuda-5.jpg",
-  // },
-  // {
-  //   id: 10,
-  //   title: "Creative Workspace",
-  //   category: "Wisuda",
-  //   description:
-  //     "A modern workspace designed for productivity and inspiration.",
-  //   src: "/assets/random/random-6.jpg",
-  // },
-
-  // Tenda category
-  // {
-  //   id: 11,
-  //   title: "Elegant Wedding Tent",
-  //   category: "Tenda",
-  //   description: "A beautifully decorated tent for a wedding celebration.",
-  //   src: "/assets/tenda/tenda-1.jpg",
-  // },
-  // {
-  //   id: 12,
-  //   title: "Outdoor Event Tent",
-  //   category: "Tenda",
-  //   description:
-  //     "A spacious and stylish tent for outdoor events and gatherings.",
-  //   src: "/assets/tenda/tenda-2.jpg",
-  // },
-  // {
-  //   id: 13,
-  //   title: "Festival-Style Tent",
-  //   category: "Tenda",
-  //   description: "A vibrant and colorful tent ideal for festivals and fairs.",
-  //   src: "/assets/tenda/tenda-3.jpg",
-  // },
 
   // Wedding category
   {
