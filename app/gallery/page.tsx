@@ -116,7 +116,7 @@ export default function Gallery() {
           <div
             className={`flex flex-wrap gap-2 md:gap-4 justify-center mb-8 md:mt-4 mt-3 ${montserrat.className}`}
           >
-            {["All", "Makeup", "Random", "Tenda", "Wedding"].map((category) => (
+            {["All", "Makeup", "Dekor", "Wedding"].map((category) => (
               <button
                 key={category}
                 onClick={() => {

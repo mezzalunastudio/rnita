@@ -16,6 +16,7 @@ const navLinks: INavLink[] = [
   { label: "Wedding & Makeup", href: "/wedding-and-makeup" },
   { label: "Paket Makeup", href: "/paket-makeup" },
   { label: "Paket Tenda", href: "/paket-tenda" },
+  { label: "Gallery", href: "/gallery" },
 ];
 
 const bodoni = Bodoni_Moda({
