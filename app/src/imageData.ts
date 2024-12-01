@@ -10,7 +10,7 @@ export const imageData = [
   },
   {
     id: 2,
-    title: "Glamorous Evening Makeup",
+    title: "Glamorous Evening",
     category: "Makeup",
     description:
       "A bold evening makeup style with a touch of glamour and elegance.",

@@ -1,20 +1,9 @@
+// app/dekorasi-engagement/page.tsx
+
 "use client";
 import React, { useState } from "react";
-import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
 import Image from "next/image";
-import { Bodoni_Moda } from "next/font/google";
-import { Montserrat } from "next/font/google";
-
-const bodoni = Bodoni_Moda({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const montserrat = Montserrat({
-  weight: "400",
-  subsets: ["latin"],
-});
+import { fonts } from "@/app/src/font";
 
 interface IDecorationPackage {
   title: string;
@@ -78,16 +67,15 @@ export default function DecorationEngagementPage() {
 
   return (
     <>
-      <Header />
       <section className="flex flex-col px-2 md:px-4">
         <h1
-          className={`text-2xl font-medium mb-2 text-center mt-7 sm:mt-3 md:mt-2 ${bodoni.className}`}
-          >
+          className={`text-2xl font-medium mb-2 text-center mt-7 sm:mt-3 md:mt-2 ${fonts.bodoni}`}
+        >
           Paket Dekorasi Engagement
         </h1>
         <div
-          className={`flex flex-wrap gap-2 md:gap-4 justify-center mb-8 md:mt-4 mt-3 ${montserrat.className}`}
-          >
+          className={`flex flex-wrap gap-2 md:gap-4 justify-center mb-8 md:mt-4 mt-3 ${fonts.montserrat}`}
+        >
           {decorationPackages.map((paket, index) => (
             <button
               key={index}
@@ -115,24 +103,24 @@ export default function DecorationEngagementPage() {
           </div>
           <div className="flex flex-col space-y-10 text-center lg:text-left">
             <h2
-              className={`text-3xl lg:text-5xl font-bold uppercase ${bodoni.className}`}
+              className={`text-3xl lg:text-5xl font-bold uppercase ${fonts.bodoni}`}
             >
               {selectedPackage.title}
             </h2>
-            <ol className={`text-left text-lg ${montserrat.className}`}>
+            <ol className={`text-left text-lg ${fonts.montserrat}`}>
               {selectedPackage.includes.map((item, idx) => (
                 <li key={idx} className="text-gray-600 capitalize md:py-2 py-1">
                   {item}
                 </li>
               ))}
             </ol>
-            <p className={`text-3xl md:text-4xl ${bodoni.className}`}>
+            <p className={`text-3xl md:text-4xl ${fonts.bodoni}`}>
               {selectedPackage.price}
             </p>
             <button
               type="button"
               formTarget="_blank"
-              className={`btn hover:bg-stone-600 uppercase px-3 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-6 lg:py-2 lg:text-base transition-colors min-h-[40px] ${montserrat.className}`}
+              className={`btn hover:bg-stone-600 uppercase px-3 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-6 lg:py-2 lg:text-base transition-colors min-h-[40px] ${fonts.montserrat}`}
               onClick={() =>
                 (window.location.href =
                   "https://api.whatsapp.com/send/?phone=62895354969032&text&type=phone_number&app_absent=0")
@@ -144,7 +132,7 @@ export default function DecorationEngagementPage() {
             {selectedPackage.additional && (
               <div className="mt-4">
                 <h3
-                  className={`text-2xl font-semibold text-stone-700 mb-2 ${bodoni.className} `}
+                  className={`text-2xl font-semibold text-stone-700 mb-2 ${fonts.bodoni} `}
                 >
                   Additional:
                 </h3>
@@ -152,7 +140,7 @@ export default function DecorationEngagementPage() {
                   {selectedPackage.additional.map((add, idx) => (
                     <li
                       key={idx}
-                      className={`text-stone-600 capitalize ${montserrat.className}`}
+                      className={`text-stone-600 capitalize ${fonts.montserrat}`}
                     >
                       {add}
                     </li>
@@ -163,7 +151,6 @@ export default function DecorationEngagementPage() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }

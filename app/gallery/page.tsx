@@ -1,24 +1,14 @@
+// app/gallery/page.tsx
+
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaArrowLeft, FaArrowRight, FaDownload, FaTimes } from "react-icons/fa";
+import { imageData } from "@/app/src/imageData";
+import { fonts } from "@/app/src/font";
 // import { GiHamburgerMenu } from "react-icons/gi";
 // import { IoMdCloseCircle } from "react-icons/io";
-import { imageData } from "@/app/src/imageData";
-import { Bodoni_Moda } from "next/font/google";
-import { Montserrat } from "next/font/google";
-import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
 
-const bodoni = Bodoni_Moda({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const montserrat = Montserrat({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -101,20 +91,17 @@ export default function Gallery() {
 
   return (
     <>
-      <Header />
       <section className="flex flex-col px-2 md:px-4">
-        <h1
-          className={`text-4xl font-bold text-center ${bodoni.className}`}
-        >
+        <h1 className={`text-4xl font-bold text-center ${fonts.bodoni}`}>
           Gallery
         </h1>
 
         {/* Desktop: Hide on small screens and show category buttons/search input */}
         <div
-          className={`flex flex-wrap justify-center md:mt-4 mt-3 ${montserrat.className}`}
+          className={`flex flex-wrap justify-center md:mt-4 mt-3 ${fonts.montserrat}`}
         >
           <div
-            className={`flex flex-wrap gap-2 md:gap-4 justify-center mb-8 md:mt-4 mt-3 ${montserrat.className}`}
+            className={`flex flex-wrap gap-2 md:gap-4 justify-center mb-8 md:mt-4 mt-3 ${fonts.montserrat}`}
           >
             {["All", "Makeup", "Dekor", "Wedding"].map((category) => (
               <button
@@ -136,7 +123,7 @@ export default function Gallery() {
 
           {/* Search Input */}
           {/* <div
-              className={`w-full md:w-auto mt-2 md:mt-0 ${montserrat.className}`}
+              className={`w-full md:w-auto mt-2 md:mt-0 ${fonts.montserrat}`}
             >
               <input
                 type="text"
@@ -235,10 +222,10 @@ export default function Gallery() {
               <div
                 className={`absolute inset-0 bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center p-4 transition-opacity duration-300`}
               >
-                <h2 className={`text-sm font-bold ${bodoni.className}`}>
+                <h2 className={`text-sm font-bold ${fonts.bodoni}`}>
                   {image.title}
                 </h2>
-                <p className={`text-xs ${montserrat.className}`}>
+                <p className={`text-xs ${fonts.montserrat}`}>
                   {image.category}
                 </p>
               </div>
@@ -305,8 +292,6 @@ export default function Gallery() {
           </div>
         </div>
       )}
-
-      <Footer />
     </>
   );
 }

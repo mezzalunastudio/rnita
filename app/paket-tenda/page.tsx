@@ -1,6 +1,6 @@
+// app/paket-tenda/page.tsx
+
 import React from "react";
-import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
 import { Bodoni_Moda } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
@@ -64,7 +64,6 @@ const imagePaths: Array<string> = [
 export default function PaketTenda() {
   return (
     <div>
-      <Header />
       <div className="flex flex-col items-center border-b-2 border-stone-400 pb-10">
         <div className="w-full max-w-[90%] mx-auto mt-10">
           <div className="flex space-x-0">
@@ -114,7 +113,6 @@ export default function PaketTenda() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
