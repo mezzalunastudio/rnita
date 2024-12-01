@@ -1,19 +1,8 @@
 // app/paket-tenda/page.tsx
 
 import React from "react";
-import { Bodoni_Moda } from "next/font/google";
-import { Montserrat } from "next/font/google";
 import Image from "next/image";
-
-const bodoni = Bodoni_Moda({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const montserrat = Montserrat({
-  weight: "400",
-  subsets: ["latin"],
-});
+import { fonts } from "@/app/src/font";
 
 const tendaPackages = [
   {
@@ -75,8 +64,11 @@ export default function PaketTenda() {
                 <Image
                   src={src}
                   alt={`Tenda Image ${index + 1}`}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{
+                    objectFit: "cover",
+                  }}
                 />
               </div>
             ))}
@@ -84,7 +76,7 @@ export default function PaketTenda() {
         </div>
 
         <h1
-          className={`text-4xl font-bold text-center text-stone-800 my-10 border-b-2 pb-2 w-1/2 border-stone-200 ${bodoni.className}`}
+          className={`text-4xl font-bold text-center text-stone-800 my-10 border-b-2 pb-2 w-1/2 border-stone-200 ${fonts.bodoni}`}
         >
           Paket Tenda
         </h1>
@@ -96,16 +88,16 @@ export default function PaketTenda() {
                 className="text-center space-y-3 outline outline-1 outline-stone-200 px-2 py-3"
               >
                 <h2
-                  className={`text-lg font-extrabold mb-3 text-stone-800 border-b border-1 border-stone-200 pb-2 w-1/2 mx-auto ${bodoni.className}`}
+                  className={`text-lg font-extrabold mb-3 text-stone-800 border-b border-1 border-stone-200 pb-2 w-1/2 mx-auto ${fonts.bodoni}`}
                 >
                   {item.name}
                 </h2>
                 <p
-                  className={`text-base text-stone-900 px-10 ${montserrat.className}`}
+                  className={`text-base text-stone-900 px-10 ${fonts.montserrat}`}
                 >
                   {item.description}
                 </p>
-                <p className={`text-base text-stone-900 ${bodoni.className}`}>
+                <p className={`text-base text-stone-900 ${fonts.bodoni}`}>
                   {item.price}
                 </p>
               </div>
