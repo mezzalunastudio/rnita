@@ -8,37 +8,43 @@ const tendaPackages = [
   {
     name: "Tenda Plafon",
     price: "150k",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "Tenda plafon dengan desain elegan untuk acara formal atau pernikahan.",
   },
   {
     name: "Tenda Serut Biasa",
     price: "200k",
-    description: "Pellentesque habitant morbi tristique senectus et netus.",
+    description: "Tenda serut sederhana yang cocok untuk berbagai jenis acara.",
   },
   {
     name: "Tenda Serut Lengkung",
     price: "300k",
-    description: "Maecenas euismod eros nec tincidunt consectetur.",
+    description:
+      "Tenda serut dengan desain lengkung yang memberikan tampilan mewah.",
   },
   {
     name: "Dinding",
     price: "10k/meter",
-    description: "Curabitur id nulla sit amet justo viverra cursus.",
+    description:
+      "Dinding tambahan untuk menutupi sisi tenda, memberikan privasi lebih.",
   },
   {
     name: "Panggung",
     price: "25k/meter",
-    description: "Proin vel magna et sapien placerat congue vel ac mi.",
+    description:
+      "Panggung kokoh untuk berbagai kebutuhan acara, seperti pidato atau pertunjukan.",
   },
   {
     name: "Tenda Daun",
     price: "500k",
-    description: "Aenean ut eros ac libero dapibus pretium.",
+    description:
+      "Tenda unik dengan dekorasi daun untuk acara outdoor yang alami.",
   },
   {
     name: "Lighting",
     price: "20k/unit",
-    description: "Ut pharetra urna vitae urna condimentum, ut pulvinar mi.",
+    description:
+      "Lampu pencahayaan untuk menciptakan suasana meriah di acara Anda.",
   },
 ];
 
