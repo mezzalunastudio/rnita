@@ -71,9 +71,7 @@ export default function Header() {
             <nav
               className={`${
                 isMenuOpen ? "flex" : "hidden"
-              } fixed inset-0 bg-white bg-opacity-90 backdrop-blur z-40 md:static block md:bg-transparent md:flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 py-8 px-6 ${
-                fonts.montserrat
-              }`}
+              } fixed inset-0 bg-white bg-opacity-90 backdrop-blur z-40 md:static block md:bg-transparent md:flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 py-8 px-6 font-spring tracking-wide`}
             >
               {navLinks.map((link, index) => {
                 const isActive = pathname === link.href;

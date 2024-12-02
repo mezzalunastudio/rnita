@@ -30,7 +30,7 @@ export default function PaketTenda() {
       </div>
 
       <h1
-        className={`text-4xl font-bold text-center text-stone-800 my-10 border-b-2 pb-2 w-1/2 border-stone-200 ${fonts.bodoni}`}
+        className={`text-6xl font-bold text-center text-stone-800 my-10 border-b-2 pb-2 w-1/2 border-stone-200  font-bickham`}
       >
         Paket Tenda
       </h1>
