@@ -18,12 +18,12 @@ export default function DecorationEngagementPage() {
     <>
       <section className="flex flex-col px-2 md:px-4">
         <h1
-          className={`text-5xl font-medium mb-2 text-center mt-7 sm:mt-3 md:mt-2 font-bickham`}
+          className={`text-2xl font-medium mb-2 text-center mt-7 sm:mt-3 md:mt-2 ${fonts.bodoni}`}
         >
           Paket Dekorasi Engagement
         </h1>
         <div
-          className={`flex flex-wrap gap-2 md:gap-4 justify-center mb-8 md:mt-4 mt-3 font-spring tracking-wide`}
+          className={`flex flex-wrap gap-2 md:gap-4 justify-center mb-8 md:mt-4 mt-3 ${fonts.montserrat}`}
         >
           {decorationPackages.map((paket, index) => (
             <button
@@ -51,17 +51,19 @@ export default function DecorationEngagementPage() {
             />
           </div>
           <div className="flex flex-col space-y-10 text-center lg:text-left">
-            <h2 className={`text-3xl lg:text-5xl font-voyage`}>
+            <h2
+              className={`text-3xl lg:text-5xl font-bold uppercase ${fonts.bodoni}`}
+            >
               {selectedPackage.title}
             </h2>
-            <ol className={`text-left text-lg font-spring tracking-wide`}>
+            <ol className={`text-left text-lg ${fonts.montserrat}`}>
               {selectedPackage.includes.map((item, idx) => (
                 <li key={idx} className="text-gray-600 capitalize md:py-2 py-1">
                   {item}
                 </li>
               ))}
             </ol>
-            <p className={`text-3xl md:text-4xl font-voyage`}>
+            <p className={`text-3xl md:text-4xl ${fonts.bodoni}`}>
               {selectedPackage.price}
             </p>
             <button
@@ -79,7 +81,7 @@ export default function DecorationEngagementPage() {
             {selectedPackage.additional && (
               <div className="mt-4">
                 <h3
-                  className={`text-2xl font-semibold text-stone-700 mb-2 font-voyage `}
+                  className={`text-2xl font-semibold text-stone-700 mb-2 ${fonts.bodoni} `}
                 >
                   Additional:
                 </h3>

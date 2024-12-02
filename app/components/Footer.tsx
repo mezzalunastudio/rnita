@@ -88,10 +88,10 @@ export default function Footer() {
             href="https://api.whatsapp.com/send/?phone=62895354969032&text&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-5xl font-voyage text-stone-700 hover:text-stone-500`}
+            className={`text-4xl ${fonts.bodoni} text-stone-700 hover:text-stone-500`}
           >
-            <span className="block mb-2">Pesan</span>
-            <span className="block">Sekarang</span>
+            <span className="block mb-2">PESAN</span>
+            <span className="block">SEKARANG</span>
           </a>
         </div>
       </div>

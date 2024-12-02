@@ -13,12 +13,12 @@ export default function MakeupPackages() {
     <>
       <section className="flex flex-col items-center">
         <h1
-          className={`text-5xl font-medium mb-2 text-center mt-7 sm:mt-3 md:mt-2 font-bickham`}
+          className={`text-2xl font-medium mb-2 text-center mt-7 sm:mt-3 md:mt-2 ${fonts.bodoni}`}
         >
           Paket Make Up
         </h1>
         <div
-          className={`flex flex-wrap gap-2 md:gap-4 justify-center mb-8 md:mt-4 mt-3 font-spring tracking-wide`}
+          className={`flex flex-wrap gap-2 md:gap-4 justify-center mb-8 md:mt-4 mt-3 ${fonts.montserrat}`}
         >
           {buttons.map((button) => (
             <button
@@ -46,13 +46,17 @@ export default function MakeupPackages() {
             />
           </div>
           <div className="flex flex-col space-y-10 text-center lg:text-left">
-            <h2 className={`text-3xl lg:text-5xl font-voyage`}>{info.title}</h2>
+            <h2
+              className={`text-3xl lg:text-5xl font-bold uppercase ${fonts.bodoni}`}
+            >
+              {info.title}
+            </h2>
             <div
-              className={`text-left text-lg font-spring tracking-wide`}
+              className={`text-left text-lg ${fonts.montserrat}`}
               dangerouslySetInnerHTML={{ __html: info.description }}
             ></div>
             <ul
-              className={`text-stone-600 text-lg space-y-3 font-spring tracking-wide`}
+              className={`text-stone-600 text-lg space-y-3 ${fonts.montserrat}`}
             >
               {info.options.map((option, idx) => (
                 <li
@@ -66,7 +70,9 @@ export default function MakeupPackages() {
                 </li>
               ))}
             </ul>
-            <p className={`text-3xl md:text-4xl font-voyage`}>{info.price}</p>{" "}
+            <p className={`text-3xl md:text-4xl ${fonts.bodoni}`}>
+              {info.price}
+            </p>{" "}
             <button
               type="button"
               formTarget="_blank"

@@ -9,6 +9,7 @@ import { fonts } from "@/app/src/font";
 // import { GiHamburgerMenu } from "react-icons/gi";
 // import { IoMdCloseCircle } from "react-icons/io";
 
+
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -91,7 +92,7 @@ export default function Gallery() {
   return (
     <>
       <section className="flex flex-col px-2 md:px-4">
-        <h1 className={`text-5xl font-bold text-center font-bickham`}>
+        <h1 className={`text-4xl font-bold text-center ${fonts.bodoni}`}>
           Gallery
         </h1>
 
