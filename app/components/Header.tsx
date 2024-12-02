@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -23,35 +24,50 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="text-stone-800 py-4 flex flex-col justify-between items-center">
+    <header className="text-stone-800 py-4 flex flex-col items-center">
       <div className="container mx-auto px-4 flex flex-col lg:flex-col items-center lg:justify-between space-y-2">
-        <Link
-          href="/wedding-and-makeup"
-          className={`md:hidden block text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase px-4 md:px-6 pt-0 md:pt-2 ${fonts.bodoni}`}
-        >
-          rnita
-        </Link>
-        
+        {/* Small Screen: Logo and Hamburger Menu */}
+        <div className="md:hidden flex justify-between items-center w-full">
+          <Link href="/wedding-and-makeup" legacyBehavior>
+            <Image
+              src="/assets/rnita-logo.jpg"
+              alt="Rnita Logo"
+              width={96}
+              height={96}
+              className="object-cover"
+            />
+          </Link>
+          <button
+            className="p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle Menu"
+          >
+            {isMenuOpen ? (
+              <FiX className="w-6 h-6 text-stone-800" />
+            ) : (
+              <FiMenu className="w-6 h-6 text-stone-800" />
+            )}
+          </button>
+        </div>
+
+        {/* Large Screen: Centered Logo */}
         <div className="border-y-2 border-stone-200 w-full flex justify-center">
           <div className="w-full max-w-7xl px-4 flex flex-col items-center">
             <Link
               href="/wedding-and-makeup"
-              className={`md:block hidden text-6xl font-extrabold lg:mb-0 lg:text-6xl uppercase px-4 md:px-6 pt-10 md:pt-2 ${fonts.bodoni}`}
+              legacyBehavior
+              className={`md:block hidden lg:mb-0 lg:text-6xl px-4 md:px-6 pt-10 md:pt-2 ${fonts.bodoni}`}
             >
-              rnita
+              <Image
+                src="/assets/rnita-logo.jpg"
+                alt="Rnita Logo"
+                width={96}
+                height={96}
+                className="object-cover"
+              />
             </Link>
 
-            <button
-              className="md:hidden fixed top-6 right-5 z-50 p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle Menu"
-            >
-              {isMenuOpen ? (
-                <FiX className="w-6 h-6 text-stone-800" />
-              ) : (
-                <FiMenu className="w-6 h-6 text-stone-800" />
-              )}
-            </button>
+            {/* Navigation Menu */}
             <nav
               className={`${
                 isMenuOpen ? "flex" : "hidden"
@@ -78,7 +94,7 @@ export default function Header() {
                         ? undefined
                         : "noopener noreferrer"
                     }
-                    onClick={() => setIsMenuOpen(false)} // Close menu on link click
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
                   </Link>
