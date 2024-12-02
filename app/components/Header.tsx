@@ -27,7 +27,7 @@ export default function Header() {
     <header className="text-stone-800 py-4 flex flex-col items-center">
       <div className="container mx-auto px-4 flex flex-col lg:flex-col items-center lg:justify-between space-y-2">
         {/* Small Screen: Logo and Hamburger Menu */}
-        <div className="md:hidden flex justify-between items-center w-full">
+        <div className="md:hidden flex justify-between items-center w-full sticky top-0 bg-white z-50">
           <Link href="/wedding-and-makeup" legacyBehavior>
             <Image
               src="/assets/rnita-logo.jpg"
@@ -56,14 +56,14 @@ export default function Header() {
             <Link
               href="/wedding-and-makeup"
               legacyBehavior
-              className={`md:block hidden lg:mb-0 lg:text-6xl px-4 md:px-6 pt-10 md:pt-2 ${fonts.bodoni}`}
+              className={`lg:mb-0 lg:text-6xl px-4 md:px-6 pt-10 md:pt-2 ${fonts.bodoni}`}
             >
               <Image
                 src="/assets/rnita-logo.jpg"
                 alt="Rnita Logo"
                 width={96}
                 height={96}
-                className="object-cover"
+                className="object-cover md:block hidden"
               />
             </Link>
 
