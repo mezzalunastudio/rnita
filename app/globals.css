@@ -39,3 +39,26 @@ ol {
     @apply bg-gray-500 hover:bg-gray-600 focus:ring-gray-300;
   }
 }
+
+@layer base {
+  @font-face {
+    font-family: "bickham";
+    font-style: regular;
+    font-weight: 400;
+    src: url("/fonts/bickham.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "voyage";
+    font-style: regular;
+    font-weight: 400;
+    src: url("/fonts/voyage-regular.woff") format(woff);
+  }
+
+  @font-face {
+    font-family: "spring";
+    font-style: regular;
+    font-weight: 400;
+    src: url("/fonts/spring.woff") format(woff);
+  }
+}

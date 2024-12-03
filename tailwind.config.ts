@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily:{
+        bickham: ['bickham', 'script'],
+        voyage: ['voyage', 'serif' ],
+        spring: ['spring' , 'serif']
+      }
     },
   },
   plugins: [],

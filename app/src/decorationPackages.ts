@@ -9,14 +9,14 @@ export interface IDecorationPackage {
 
 export const decorationPackages: IDecorationPackage[] = [
   {
-    title: "PAKET 1",
+    title: "Paket 1",
     price: "Rp. 1.000.000",
     includes: [
       "backdrop 3 meter",
       "bunga artificial",
       "lighting",
       "background kain",
-      "2 kursi tifani (putih/coklat)",
+      "2 kursi tifani putih & coklat",
       "karpet",
       "inisial nama",
     ],
@@ -24,7 +24,7 @@ export const decorationPackages: IDecorationPackage[] = [
     button: "Pesan Sekarang",
   },
   {
-    title: "PAKET 2",
+    title: "Paket 2",
     price: "Rp. 1.500.000",
     includes: [
       "backdrop 3 meter",
@@ -38,7 +38,7 @@ export const decorationPackages: IDecorationPackage[] = [
     button: "Pesan Sekarang",
   },
   {
-    title: "PAKET 2 with Makeup",
+    title: "Paket 2 with Makeup",
     price: "Rp. 1.750.000",
     includes: [
       "backdrop 3 meter",
