@@ -30,11 +30,11 @@ export default function Header() {
         <div className="md:hidden flex justify-between items-center w-full sticky top-0 bg-white z-50">
           <Link href="/wedding-and-makeup" legacyBehavior>
             <Image
-              src="/assets/rnita-logo.jpg"
+              src="/assets/rnita-logo.png"
               alt="Rnita Logo"
-              width={96}
-              height={96}
-              className="object-cover"
+              width={48}
+              height={48}
+              className="object-cover cursor-pointer"
             />
           </Link>
           <button
@@ -59,11 +59,11 @@ export default function Header() {
               className={`lg:mb-0 lg:text-6xl px-4 md:px-6 pt-10 md:pt-2 ${fonts.bodoni}`}
             >
               <Image
-                src="/assets/rnita-logo.jpg"
+                src="/assets/rnita-logo.png"
                 alt="Rnita Logo"
-                width={96}
-                height={96}
-                className="object-cover md:block hidden"
+                width={48}
+                height={48}
+                className="object-cover md:block hidden mt-4 cursor-pointer"
               />
             </Link>
 
