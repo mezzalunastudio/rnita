@@ -2,7 +2,6 @@
 
 "use client";
 import React, { useState } from "react";
-
 import Image from "next/image";
 import { fonts } from "@/app/src/font";
 import { buttons, IButtonInfo } from "@/app/src/makeupPackages";
